@@ -43,12 +43,10 @@ namespace Empires.Core
                 case "build barracks":
                     this.ProcessTurn();
                     db.AddBuilding(new Barracks());
-                    //buildings.Add(new Barracks());
                     break;
                 case "build archery":
                     this.ProcessTurn();
                     db.AddBuilding(new Archery());
-                    //buildings.Add(new Archery());
                     break;
                 case "empire-status":
                     this.ShowStatus();
@@ -75,7 +73,6 @@ namespace Empires.Core
             db.IncrementBuildingsCounter();
             foreach (Building building in this.db.GetBuildings())
             {
-                //building.Tick();
                 try
                 {
                     db.AddUnit(building.GetUnit());
