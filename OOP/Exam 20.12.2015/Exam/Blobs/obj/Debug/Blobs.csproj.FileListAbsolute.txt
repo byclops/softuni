@@ -1,0 +1,12 @@
+C:\Users\nikolai\Documents\Visual Studio 2015\Projects\OOP\Exam 20.12.2015\Exam\Blobs\bin\Debug\Blobs.exe.config
+C:\Users\nikolai\Documents\Visual Studio 2015\Projects\OOP\Exam 20.12.2015\Exam\Blobs\bin\Debug\Blobs.exe
+C:\Users\nikolai\Documents\Visual Studio 2015\Projects\OOP\Exam 20.12.2015\Exam\Blobs\bin\Debug\Blobs.pdb
+C:\Users\nikolai\Documents\Visual Studio 2015\Projects\OOP\Exam 20.12.2015\Exam\Blobs\obj\Debug\Blobs.csprojResolveAssemblyReference.cache
+C:\Users\nikolai\Documents\Visual Studio 2015\Projects\OOP\Exam 20.12.2015\Exam\Blobs\obj\Debug\Blobs.exe
+C:\Users\nikolai\Documents\Visual Studio 2015\Projects\OOP\Exam 20.12.2015\Exam\Blobs\obj\Debug\Blobs.pdb
+C:\Users\NikolayKo\Documents\Visual Studio 2013\Projects\OOP\exam\Blobs\bin\Debug\Blobs.exe.config
+C:\Users\NikolayKo\Documents\Visual Studio 2013\Projects\OOP\exam\Blobs\obj\Debug\Blobs.exe
+C:\Users\NikolayKo\Documents\Visual Studio 2013\Projects\OOP\exam\Blobs\obj\Debug\Blobs.pdb
+C:\Users\NikolayKo\Documents\Visual Studio 2013\Projects\OOP\exam\Blobs\obj\Debug\Blobs.csprojResolveAssemblyReference.cache
+C:\Users\NikolayKo\Documents\Visual Studio 2013\Projects\OOP\exam\Blobs\bin\Debug\Blobs.exe
+C:\Users\NikolayKo\Documents\Visual Studio 2013\Projects\OOP\exam\Blobs\bin\Debug\Blobs.pdb

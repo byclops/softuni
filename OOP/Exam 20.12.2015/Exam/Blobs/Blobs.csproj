@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FF5885DA-3192-4FD0-B4CB-AA6A314CADED}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Blobs</RootNamespace>
+    <AssemblyName>Blobs</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AbstractClassess\AbstractAttack.cs" />
+    <Compile Include="AbstractClassess\AbstractEngine.cs" />
+    <Compile Include="Attack\Blobplode.cs" />
+    <Compile Include="Attack\PutridFart.cs" />
+    <Compile Include="Behavior\Aggressive.cs" />
+    <Compile Include="AbstractClassess\AbstractBehavior.cs" />
+    <Compile Include="Behavior\Inflated.cs" />
+    <Compile Include="Core\BaseDB.cs" />
+    <Compile Include="Core\Commands\Attack.cs" />
+    <Compile Include="AbstractClassess\AbstractCommand.cs" />
+    <Compile Include="Core\Commands\Create.cs" />
+    <Compile Include="Core\Commands\Pass.cs" />
+    <Compile Include="Core\Commands\ReportEvents.cs" />
+    <Compile Include="Core\Commands\Status.cs" />
+    <Compile Include="Core\Engine.cs" />
+    <Compile Include="Core\GetCurrentCommands.cs" />
+    <Compile Include="Core\ObjectGenerator.cs" />
+    <Compile Include="Events\OutputEventsConstants.cs" />
+    <Compile Include="Events\OutputMessageEventArgs.cs" />
+    <Compile Include="Events\OutputMessageEventHandler.cs" />
+    <Compile Include="Interfaces\IBlobDB.cs" />
+    <Compile Include="Interfaces\IOutputEnabled.cs" />
+    <Compile Include="Model\Blob.cs" />
+    <Compile Include="BlobsDemo.cs" />
+    <Compile Include="Core\ConsoleUI.cs" />
+    <Compile Include="Interfaces\IAttack.cs" />
+    <Compile Include="Interfaces\IBehavior.cs" />
+    <Compile Include="Interfaces\IBlobUI.cs" />
+    <Compile Include="AbstractClassess\AbstractBlobEntity.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
