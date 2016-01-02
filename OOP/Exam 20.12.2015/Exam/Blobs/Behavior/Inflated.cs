@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Behavior
+﻿namespace Blobs.Behavior
 {
-    using Blobs.Interfaces;
-    using Blobs.AbstractClasses;
+    using AbstractClasses;
 
     public class Inflated: AbstractBehavior
     {
@@ -17,12 +10,12 @@ namespace Blobs.Behavior
             blob.BehavoirModifiedDamage = blob.AttackModifiedDamage;
             blob.AttackModifiedDamage = blob.BaseDamage;
         }
+
         protected override void CalculateTurnEffects(AbstractBlobEntity blob)
         {
             blob.Health -=10;
             
         }
-
 
         protected override void InitializeParameters(AbstractBlobEntity blob)
         {

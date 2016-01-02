@@ -1,14 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Core.Commands
+﻿namespace Blobs.Core.Commands
 {
-    using Blobs.Interfaces;
-    using Blobs.AbstractClasses;
-
+    using AbstractClasses;
 
     public class Pass: AbstractCommand
     {
@@ -17,9 +9,12 @@ namespace Blobs.Core.Commands
         {
 
         }
+
         public override void Run(string[] parameters)
         {
+
         }
+
         public override string Id
         {
             get

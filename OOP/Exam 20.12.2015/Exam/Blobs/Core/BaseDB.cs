@@ -1,28 +1,25 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Core
+﻿namespace Blobs.Core
 {
-    using Blobs.Interfaces;
-    using Blobs.Model;
+    using System.Collections.Generic;
+    using System.Text;
+    using Interfaces;
+    using Model;
 
 
-    public class BaseDB: IBlobDB
+    public class BaseDb: IBlobDb
     {
-        //private List<Blob> blobs = new List<Blob>();
         private Dictionary<string, Blob> blobs = new Dictionary<string, Blob>();
 
         public void AddBlob(Blob blob)
         {
             this.blobs[blob.Name] = blob;
         }
+
         public Blob GetBlob(string blobName)
         {
             return this.blobs[blobName];
         }
+
         public void SetBlob(Blob blob)
         {
             this.blobs[blob.Name] = blob;

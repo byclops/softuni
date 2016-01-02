@@ -1,10 +1,8 @@
 ﻿namespace Blobs.Attack
 {
-    using Blobs.Interfaces;
-    using Blobs.Model;
-    using Blobs.AbstractClasses;
+    using AbstractClasses;
 
-    public class PutridFart: AbstractAttack, IAttack
+    public class PutridFart: AbstractAttack
     {
         public override void ApplyEffects(AbstractBlobEntity blob)
         {

@@ -1,22 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Core
+﻿namespace Blobs.Core
 {
+    using System;
+
     public class ObjectGenerator
     {
         public object Create( string objectType, string nameSpace="")
         {
-
             Type type = Type.GetType(nameSpace + "." + objectType);
-            //Console.WriteLine(this.GetType().AssemblyQualifiedName);
-            var obj = Convert.ChangeType(Activator.CreateInstance(type), type);
-            //Dictionary<string, (obj.GetType())> tmp = new Dictionary<string, (obj.GetType())>();
+            if (type == null)
+            {
+                throw new Exception($"Type {nameSpace}.{objectType} not found!");
+            }
+            //var obj = Convert.ChangeType(Activator.CreateInstance(type), type);
             return Convert.ChangeType(Activator.CreateInstance(type), type);
-
         }
     }
 }

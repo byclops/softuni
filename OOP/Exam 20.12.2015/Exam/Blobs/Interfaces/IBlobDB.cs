@@ -1,19 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Interfaces
+﻿namespace Blobs.Interfaces
 {
-    using Blobs.Model;
+    using System.Collections.Generic;
+    using Model;
 
-    public interface IBlobDB
+    public interface IBlobDb
     {
         void AddBlob(Blob blob);
+
         Blob GetBlob(string blobName);
+
         ICollection<string> GetBlobs();
+
         void SetBlob(Blob blob);
+
         void NextTurn();
     }
 }

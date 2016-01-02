@@ -44,16 +44,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AbstractClassess\AbstractAttack.cs" />
-    <Compile Include="AbstractClassess\AbstractEngine.cs" />
+    <Compile Include="AbstractClasses\AbstractAttack.cs" />
+    <Compile Include="AbstractClasses\AbstractEngine.cs" />
     <Compile Include="Attack\Blobplode.cs" />
     <Compile Include="Attack\PutridFart.cs" />
     <Compile Include="Behavior\Aggressive.cs" />
-    <Compile Include="AbstractClassess\AbstractBehavior.cs" />
+    <Compile Include="AbstractClasses\AbstractBehavior.cs" />
     <Compile Include="Behavior\Inflated.cs" />
-    <Compile Include="Core\BaseDB.cs" />
+    <Compile Include="Core\BaseDb.cs" />
     <Compile Include="Core\Commands\Attack.cs" />
-    <Compile Include="AbstractClassess\AbstractCommand.cs" />
+    <Compile Include="AbstractClasses\AbstractCommand.cs" />
     <Compile Include="Core\Commands\Create.cs" />
     <Compile Include="Core\Commands\Pass.cs" />
     <Compile Include="Core\Commands\ReportEvents.cs" />
@@ -68,11 +68,9 @@
     <Compile Include="Interfaces\IOutputEnabled.cs" />
     <Compile Include="Model\Blob.cs" />
     <Compile Include="BlobsDemo.cs" />
-    <Compile Include="Core\ConsoleUI.cs" />
-    <Compile Include="Interfaces\IAttack.cs" />
-    <Compile Include="Interfaces\IBehavior.cs" />
+    <Compile Include="Core\ConsoleUi.cs" />
     <Compile Include="Interfaces\IBlobUI.cs" />
-    <Compile Include="AbstractClassess\AbstractBlobEntity.cs" />
+    <Compile Include="AbstractClasses\AbstractBlobEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

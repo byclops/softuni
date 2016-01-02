@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace Blobs.Events
+﻿namespace Blobs.Events
 {
+    using System;
+
     public class OutputMessageEventArgs: EventArgs
     {
         public OutputMessageEventArgs(int verbocity, string message)
@@ -9,7 +9,9 @@ namespace Blobs.Events
             this.Verbocity = verbocity;
             this.Message = message;
         }
+
         public string Message { get; private set; }
+
         public int Verbocity { get; private set; }
     }
 }

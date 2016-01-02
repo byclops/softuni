@@ -1,12 +1,9 @@
 ﻿namespace Blobs.Attack
 {
-    using Blobs.Interfaces;
-    using Blobs.Model;
-    using Blobs.AbstractClasses;
+    using AbstractClasses;
 
-    public class Blobplode : AbstractAttack, IAttack
+    public class Blobplode : AbstractAttack
     {
-
         public override void ApplyEffects(AbstractBlobEntity blob)
         {
             blob.AttackModifiedDamage = blob.BaseDamage *2;

@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Core.Commands
+﻿namespace Blobs.Core.Commands
 {
-    using Blobs.Interfaces;
-    using Blobs.Model;
-    using Blobs.AbstractClasses;
+    using Model;
+    using AbstractClasses;
 
 
     public class Create: AbstractCommand

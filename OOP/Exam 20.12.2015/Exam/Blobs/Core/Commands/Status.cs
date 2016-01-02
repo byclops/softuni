@@ -1,14 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.Core.Commands
+﻿namespace Blobs.Core.Commands
 {
-    using Blobs.Interfaces;
-    using Blobs.AbstractClasses;
-    using Blobs.Events;
+    using AbstractClasses;
+    using Events;
 
     public class Status:AbstractCommand
     {
@@ -19,16 +12,14 @@ namespace Blobs.Core.Commands
         {
 
         }
+
         public override void Run(string[] parameters)
         {
-            if (this.OutputMessage != null)
-            {
-                this.OutputMessage(this, new OutputMessageEventArgs(
-                    OutputEventsConstants.MessageIdStatus,
-                    this.engine.Db.ToString()));
-            }
-            //this.engine.Io.Write(this.engine.Db.ToString());
+            this.OutputMessage?.Invoke(this, new OutputMessageEventArgs(
+                OutputEventsConstants.MessageIdStatus,
+                this.engine.Db.ToString()));
         }
+
         public override string Id
         {
             get

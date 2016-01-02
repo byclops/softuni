@@ -1,13 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-
+﻿
 namespace Blobs.Core
 {
-    using Blobs.Interfaces;
-    using Blobs.AbstractClasses;
-    using Blobs.Core.Commands;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Reflection;
+    using AbstractClasses;
 
     public class GetCurrentCommands
     {
@@ -32,10 +30,8 @@ namespace Blobs.Core
             {
                 return commands[index];
             }
-
         }
 
         public IEnumerable<string> Keys { get { return this.commands.Keys; } }
     }
-
 }

@@ -1,13 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Blobs.AbstractClasses
+﻿namespace Blobs.AbstractClasses
 {
-    using Blobs.Interfaces;
-    using Blobs.Model;
+    using System;
 
     public abstract class AbstractBehavior 
     {
@@ -16,18 +9,19 @@ namespace Blobs.AbstractClasses
         {
             get { return this.activeTurnsCount > -1; }
         }
+
         public void ApplyEffects(AbstractBlobEntity blob)
         {
             if (this.activeTurnsCount >-1)
             {
                 CalculateAttackEffects(blob);
             }
+
             else
             {
                 blob.BehavoirModifiedDamage = blob.AttackModifiedDamage;
                 blob.AttackModifiedDamage = blob.BaseDamage;
             }
-
         }
 
         public virtual void ApplyTurnEffects(AbstractBlobEntity blob)
@@ -36,6 +30,7 @@ namespace Blobs.AbstractClasses
             {
                 CalculateTurnEffects(blob);
             }
+
             if (this.activeTurnsCount > -1)
             {
                 this.activeTurnsCount++;
@@ -49,19 +44,15 @@ namespace Blobs.AbstractClasses
 
         }
 
-        //public abstract void NextTurn();
-
         public void Activate(AbstractBlobEntity blob)
         {
             if (this.activeTurnsCount > -1)
             {
                 throw new Exception("Behavior already Active");
             }
+
             this.activeTurnsCount = 0;
             this.InitializeParameters(blob);
-            
         }
-
-
     }
 }
