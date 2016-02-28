@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Problem02
 {
@@ -10,20 +7,15 @@ namespace Problem02
     {
         static void Main(string[] args)
         {
-            bool[,] test = new bool[10000, 10000];
-            for (int i = 0; i < 10000; i++)
-            {
-                test[i, 0] = true;
-            }
-
             string[] dimensions = Console.ReadLine().Split(' ');
             int r = int.Parse(dimensions[0]);
             int c = int.Parse(dimensions[1]);
 
-            bool[,] parking = new bool[r, c];
+            var parking = new List<HashSet<int>>();
             for (int i = 0; i < r; i++)
             {
-                parking[i, 0] = true;
+                parking.Add(new HashSet<int>());
+                parking[i].Add(0);
             }
 
             string line = Console.ReadLine();
@@ -33,49 +25,46 @@ namespace Problem02
                 int entryRow = int.Parse(elements[0]);
                 int destRow = int.Parse(elements[1]);
                 int destCol = int.Parse(elements[2]);
-                int actualCol = FindPlace(parking, destRow, destCol);
-                //Console.WriteLine(  "Actual:{0}", actualCol);
+                int actualCol = FindPlace(parking, r,c, destRow, destCol);
                 if (actualCol == -1)
                 {
                     Console.WriteLine("Row {0} full", destRow);
                 }
                 else
                 {
-                    parking[destRow, actualCol] = true;
+                    parking[destRow].Add(actualCol);
                     int path = Math.Abs(destRow - entryRow) + actualCol + 1;
                     Console.WriteLine(path);
                 }
+
                 line = Console.ReadLine();
-
             }
-
-            Console.WriteLine();
         }
 
-        public static int FindPlace(bool[,] parking, int destRow, int destCol)
+        public static int FindPlace(List<HashSet<int>> parking, int r, int c, int destRow, int destCol)
         {
-            if (!parking[destRow, destCol])
+            if (!parking[destRow].Contains(destCol))
                 return destCol;
+
             int delta = 1;
             while (true)
             {
                 bool rowFullLeft = false;
-                if (IsInsideParking(parking, destRow, destCol - delta))
+                if (IsInsideParking(r, c, destRow, destCol - delta))
                 {
-                    if (!parking[destRow, destCol - delta])
+                    if (!parking[destRow].Contains(destCol-delta))
                     {
                         return destCol - delta;
                     }
-
                 }
                 else
                 {
                     rowFullLeft = true;
                 }
 
-                if (IsInsideParking(parking, destRow, destCol + delta))
+                if (IsInsideParking(r,c , destRow, destCol + delta))
                 {
-                    if (!parking[destRow, destCol + delta])
+                    if (!parking[destRow].Contains(destCol + delta))
                     {
                         return destCol + delta;
                     }
@@ -90,12 +79,11 @@ namespace Problem02
             return -1;
         }
 
-        public static bool IsInsideParking(bool[,] parking, int row, int col)
+        public static bool IsInsideParking(int r, int c, int row, int col)
         {
-            if (row >= 0 && col >= 0 && row < parking.GetLength(0) && col < parking.GetLength(1))
+            if (row >= 0 && col >= 0 && row < r && col <c)
                 return true;
             return false;
-
         }
     }
 }
